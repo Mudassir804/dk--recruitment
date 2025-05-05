@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DK Recruitment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white">
+
+  <!-- Navbar link -->
+  <div id="navbar"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden h-auto min-h-[500px]">
+    <!-- Diagonal Black Background -->
+    <div class="absolute top-0 left-0 w-full h-full bg-[#262626]"
+         style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 70%);">
+    </div>
+  
+    <!-- Content Overlaid on Top -->
+    <div class="container mx-auto flex flex-row items-center justify-between px-6 py-10 relative z-10 text-white h-full flex-wrap">
+      
+      <!-- Text Content -->
+      <div class="w-full sm:w-1/2 space-y-4 px-6 flex flex-col justify-center items-start text-left">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold animate-pulse">DK RECRUITMENT</h2>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400 animate-bounce">Job Chahy??</h1>
+        <a href="https://forms.gle/GEosEjmYo48c68F18"
+           class="text-base bg-yellow-400 text-black font-bold px-6 py-2 rounded-full shadow-md 
+                  hover:bg-yellow-500 hover:text-white transition duration-300 hover:scale-105 
+                  w-max">
+           Apply Now
+        </a>
+      </div>
+  
+      <!-- Image Content -->
+      <div class="w-full sm:w-1/2 flex justify-center items-center mt-6 sm:mt-0">
+        <img src="Assests.Dk/in c.png" alt="Recruitment Guy" class="w-[220px] sm:w-[300px] lg:w-[500px] animate-fade-in" />
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  <!-- Custom Animation -->
+  <style>
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+  </style>
+
+       <!---------------second page-->
+
+       
+        <section class="bg-white px-6 py-16 mt-3">
+            <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+              
+              <!-- Text Section -->
+              <div class="lg:w-1/2">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 animate-fade-in">Our Company Story</h2>
+                <p class="text-gray-700 mb-3 leading-relaxed">DK Recruitment started with a simple mission — to connect talented individuals with the right opportunities.
+                    What began as a small initiative has now grown into a trusted recruitment partner for businesses and job seekers alike.
+                </p>
+                <p class="text-gray-700 leading-relaxed">At DK Recruitment, your growth is our priority.</p>
+              </div>
+          
+              <!-- Image Section -->
+              <div class="flex gap-1 lg:w-1/2 justify-center animate-slide-in">
+                <div class="w-36 h-64 bg-black rounded-3xl hover:scale-105 hover:rotate-2 transition-transform duration-500 ease-in-out flex items-center justify-center">
+                  <p class="text-white text-center">DK Recruitment</p>
+                </div>
+                <div class="w-36 h-64 bg-black rounded-3xl hover:scale-105 hover:-rotate-2 transition-transform duration-500 ease-in-out flex items-center justify-center">
+                  <img src="Assests.Dk/ball.png" alt=""><!-- You can replace this with your logo -->
+                </div>
+              </div>
+          
+            </div>
+          </section>
+          
+          <!-- Custom Animations -->
+          <style>
+            @keyframes fade-in {
+              0% { opacity: 0; transform: translateY(30px); }
+              100% { opacity: 1; transform: translateY(0); }
+            }
+          
+            @keyframes slide-in {
+              0% { opacity: 0; transform: translateX(50px); }
+              100% { opacity: 1; transform: translateX(0); }
+            }
+          
+            .animate-fade-in {
+              animation: fade-in 1s ease-out forwards;
+            }
+          
+            .animate-slide-in {
+              animation: slide-in 1s ease-out forwards;
+            }
+          </style>
+
+
+                 <!--------Sinup-->
+          
+     <section class="bg-[#f9fafd] text-center mt-5">
+        <p class="text-3xl font-bold  pt-8">
+            "Take the First Step Toward Your Dream <br>
+              Career — Join DK Recruitment Today!"
+
+        </p>
+        <input type="button" value="Sign up"   class=" mb-5 mt-4 bg-[#262626] text-white px-6 py-2 rounded-lg cursor-pointer 
+        hover:bg-black transition duration-300 hover:scale-105">
+     </section>  
+   
+
+
+     <!----------logo section-->
+
+     <section class="overflow-hidden whitespace-nowrap bg-white py-4 mt-8 p-4 pb-8">
+        <div class="animate-marquee inline-block">
+          <img src="Assests.Dk/Auto.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/property.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/Bundu khan.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/serve.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/Global.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/Artum.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/Askari.png" class="h-16 mx-4 inline-block" alt="">
+          <img src="Assests.Dk/mezzan.png" class="h-16 mx-4 inline-block" alt="">
+        </div>
+      </section>
+      
+      <style>
+        @keyframes marquee {
+          0%   { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+      
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      </style>
+
+
+                               <!----------Positions-->
+
+    <section class="bg-[#262626] text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h1 class="text-3xl md:text-4xl font-extrabold leading-snug animate-pulse">
+        “We don’t just fill positions — we build futures.”
+         </h1>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-200">
+        We believe hiring is about more than filling a vacancy — it's about shaping careers and strengthening
+        organizations. We are committed to connecting the right people with the right opportunities to build
+           a future of success for both candidates and companies.
+             </p>
+                                
+           </div>
+         </section>
+                                                     
+      <!---------------------------------Opening in-->
+      <style>
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        .fade-in-up {
+          animation: fadeInUp 1s ease-out forwards;
+        }
+      </style>
+    </head>
+    <body class="bg-white text-black font-sans">
+    
+      <div class="text-center my-10">
+        <h1 class="text-4xl font-bold">Opening In</h1>
+      </div>
+    
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 px-4 fade-in-up">
+        <!-- Card 1 -->
+        <div class="bg-gradient-to-b from-black to-gray-800 text-white p-6 rounded-2xl w-full md:w-80 text-center shadow-xl hover:scale-105 transition-transform duration-300">
+          <img src="Assests.Dk/Finding-removebg-preview.png" alt="" class="mx-auto mb-4" />
+          <h2 class="text-2xl font-semibold mb-2">Jobs</h2>
+          <p class="mb-4 text-lg">We help you find roles that match your skills, passion, and long–term goals.</p>
+          <a href="jobs.html">
+            <button class="bg-white text-black font-semibold px-5 py-2 rounded shadow transition duration-300 hover:bg-gray-100 hover:scale-105 cursor-pointer">
+              Learn More
+            </button>
+          </a>
+          
+        </div>
+        
+    
+        <!-- Card 2 -->
+        <div class="bg-gradient-to-b from-black to-gray-800 text-white p-6 rounded-2xl w-full md:w-80 text-center shadow-xl hover:scale-105 transition-transform duration-300">
+       <img src="Assests.Dk/Building-removebg-preview.png" alt="" class="mx-auto mb-4">
+          <h2 class="text-2xl font-semibold mb-2">Internships</h2>
+          <p class="mb-4 text-lg">Explore remote and on-site opportunities tailored to your interests.</p>
+          <a href="internship.html">
+            <button class="bg-white text-black font-semibold px-5 py-2 rounded shadow transition duration-300 hover:bg-gray-100 hover:scale-105 cursor-pointer">
+              Learn More
+            </button>
+          </a>
+          
+          
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="bg-gradient-to-b from-black to-gray-800 text-white p-6 rounded-2xl w-full md:w-80 text-center shadow-xl hover:scale-105 transition-transform duration-300">
+          <img src="Assests.Dk/Words-removebg-preview.png" alt="" class="mx-auto mb-4">
+          <h2 class="text-2xl font-semibold mb-2">Overseas Job</h2>
+          <p class="mb-4 text-lg">We offer overseas jobs in countries like the UAE, US and beyond.</p>
+          <a href="jobs.html">
+            <button class="bg-white text-black font-semibold px-5 py-2 rounded shadow transition duration-300 hover:bg-gray-100 hover:scale-105 cursor-pointer">
+              Learn More
+            </button>
+          </a>
+          
+          
+        </div>
+      </div>
+
+
+                            <!-----------------Section  EDUCTIONAL-->
+
+    <!-- Animation Style -->
+<style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+</style>
+
+<!-- Section -->
+<section class=" mt flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto fade-in-up">
+  <!-- Text Content -->
+  <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+    <h2 class="text-7xl font-bold mb-4">Educational Visas — Coming Soon!</h2>
+    <p class="text-lg text-gray-700 font-bold">
+      DK Recruitment will soon offer educational visa services to help students study abroad in top destinations like the UK, Canada, and Australia.
+    </p>
+  </div>
+
+  <!-- Image -->
+  <div class="md:w-1/2 flex justify-center">
+    <img src="Assests.Dk/Eductional Global.png" alt="Educational Visas" class=" animate-bounce-slow" />
+  </div>
+</section>
+
+<!-- Optional Bounce Animation -->
+<style>
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s infinite;
+  }
+</style>
+
+
+                  <!--------whatssap icons-->
+
+                  <style>
+                    @keyframes fadeInUp {
+                      0% {
+                        opacity: 0;
+                        transform: translateY(20px);
+                      }
+                      100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                      }
+                    }
+                
+                    .fade-in-up {
+                      animation: fadeInUp 1s ease-out forwards;
+                    }
+                  </style>
+                
+             
+                <div class="bg-[#f9fafd] min-h-screen flex items-center justify-center p-4">
+                  <div class="text-center fade-in-up space-y-6 max-w-2xl">
+                    
+                    <!-- WhatsApp Icon -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+                    alt="WhatsApp Icon"
+                    class="mx-auto w-32 h-32 md:w-40 md:h-40 rounded-full">
+               
+                
+                    <!-- Heading -->
+                    <h1 class="text-3xl md:text-5xl font-bold text-black">
+                      Hire the Right Staff for Your Company
+                    </h1>
+                
+                    <!-- Paragraph -->
+                    <p class="text-lg text-gray-600">
+                      Struggling to find skilled and reliable staff? DK Recruitment makes hiring easy. From CV sourcing to
+                      final onboarding, we handle the entire process so you can focus on growing your business.
+                    </p>
+                
+                    <!-- Button -->
+                    <a href="https://wa.me/1234567890" target="_blank"
+                       class="inline-block bg-[#262626] hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:scale-105">
+                      Message on WhatsApp
+                    </a>
+                
+                  </div>
+                </div>
+       
+               <!-------------job cheyea--------------->  
+               <!-- Section -->
+<section class=" mt flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto fade-in-up">
+  <!-- Text Content -->
+  <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+    <h2 class="text-7xl font-bold mb-4" style="color: #ffbd59;">𝓙𝓸𝓫 𝓒𝓱𝓪𝓱𝔂??</h2>
+   <p class="text-3xl text-gray-700">
+      Abhi rabta kro DK Recruitment sy.
+    </p>
+    <input type="button" value="WhatsApp"
+    class="mb-5 mt-4 bg-[#4db929] text-white px-6 py-2 rounded-lg cursor-pointer
+           transition duration-300 hover:bg-black hover:text-white hover:scale-105 ">
+</div>  
+
+  <!-- Image -->
+  <div class="md:w-1/2 flex justify-center">
+    <img src="Assests.Dk/left person.png" alt="Educational Visas" class=" animate-bounce-slow" />
+  </div>
+  
+</section>     
+
+
+                      <!-------------------Rocket-------->
+  <section id="rocket">
+    <img src="Assests.Dk/Rocket.png" alt="" class="w-100% h-auto">
+
+  </section>     
+            
+</body>
+<div id="footer"></div>
+<script>
+  fetch("Footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</html>

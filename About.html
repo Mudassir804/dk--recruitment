@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About </title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body>
+
+    <!----------Navbar link-->
+    <div id="navbar"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  
+    <style>
+        @keyframes pop-in {
+          0% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      
+        .animate-pop-in {
+          animation: pop-in 1s ease-out forwards;
+        }
+      
+        .radial-dark-bg {
+          background: radial-gradient(circle at center, #5a5a5a 0%, #1a1a1a 60%, #0b0b0b 100%);
+        }
+      </style>
+      
+      <div class="relative w-full overflow-hidden">
+        <!-- Curved Dark Gradient Background -->
+        <div class="w-full h-[400px] radial-dark-bg rounded-b-[50%] flex items-center justify-center">
+          <img src="Assests.Dk/light men.png" alt="Idea Icon" class="w-56 h-56 animate-pop-in" />
+        </div>
+      </div>
+      
+                        <!------success srory-->
+                        <section class="">
+                            <h1 class="mt-8 text-2xl font-bold text-center">Success Story</h1>
+                            <div class="flex justify-center mt-6">
+                              <img src="Assests.Dk/success.png" alt="Success" class="w-[900px]" />
+                            </div>
+                          </section>
+
+       
+                         <!-------Success person---->
+
+ <section>
+  <section class="mt flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 fade-in-up">
+                <h1 class="text-3xl font-bold">Our Journey</h1> <br>
+                <p class="text-lg">DK Recruitment began with a simple goal — to
+                  simplify hiring and empower careers. What
+                  started as a small initiative quickly evolved into a
+                  trusted recruitment platform serving both local
+                  and international markets.
+                  Over the years, we’ve successfully connected
+                  hundreds of job seekers with meaningful roles and
+                  helped companies build strong, capable teams.</p>
+            </div>
+          
+            <div class="md:w-1/2 flex justify-center">
+                <img src="Assests.Dk/Success person.png" alt="Educational Visas" class="pulse-scale" />
+              </div>
+              
+          </section>
+
+
+                    <!-------------Branches-->
+       
+  <section class="py-12 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Branches</h2>
+
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Branch Card -->
+      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+        <img src="Assests.Dk/SIDDIQ TRADE CENTRE.png" alt="Siddiq Trade Centre" class="w-full h-40 object-cover">
+        <div class="bg-black text-white text-center py-2">SIDDIQ TRADE CENTRE</div>
+      </div>
+
+      <!-- Repeat for other branches -->
+      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+        <img src="Assests.Dk/AL-HAFEEZ EXECUTIVE.png" alt="Al-Hafeez Executive" class="w-full h-40 object-cover">
+        <div class="bg-black text-white text-center py-2">AL-HAFEEZ EXECUTIVE</div>
+      </div>
+
+      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+        <img src="Assests.Dk/JEFF HEIGHTS.png" alt="Jeff Heights" class="w-full h-40 object-cover">
+        <div class="bg-black text-white text-center py-2">JEFF HEIGHTS</div>
+      </div>
+
+      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+        <img src="Assests.Dk/AL-HAFEEZ SHOPPING MALL.png" alt="Al-Hafeez Shopping Mall" class="w-full h-40 object-cover">
+        <div class="bg-black text-white text-center py-2">AL-HAFEEZ SHOPPING MALL</div>
+      </div>
+
+      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+        <img src="Assests.Dk/RAFI GROUP LAND MARK.png" alt="Rafi Group Land" class="w-full h-40 object-cover">
+        <div class="bg-black text-white text-center py-2">RAFI GROUP LAND MARK</div>
+      </div>
+    </div>
+
+
+                     <!------------call now------->
+
+   <section class="mt flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 fade-in-up">
+              <h2 class="text-7xl font-bold mb-4">Call Now</h2>
+              <p class="text-2xl text-black">For Job or Internship</p>
+              <h2 class="text-5xl font-bold mb-4">+92 306 4277026</h2>
+              <p class="text-2xl text-black">For Staffing Solutions</p>
+              <h2 class="text-5xl font-bold mb-4">+92 306 4257447</h2>
+            </div>
+          
+            <div class="md:w-1/2 flex justify-center">
+                <img src="Assests.Dk/Call Now.png" alt="Educational Visas" class="pulse-scale" />
+              </div>
+              
+          </section>
+              
+    <style>
+        @keyframes pulse-in-out {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.20);
+          }
+        }
+      
+        .pulse-scale {
+          animation: pulse-in-out 3s infinite ease-in-out;
+        }
+      </style>
+</body>
+<div id="footer"></div>
+<script>
+  fetch("Footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</html>
