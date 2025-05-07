@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About </title>
     <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="shortcut icon" href="1.png" type="image/x-icon">
+
 </head>
 <body>
 
     <!----------Navbar link-->
-    <div id="navbar"></div>
+    <div id="navbar-placeholder"></div>
 
     <script>
       fetch("navbar.html")
         .then(res => res.text())
         .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
+          document.getElementById("navbar-placeholder").innerHTML = data;
+  
+          // ✅ Bind events after navbar is inserted into DOM
+          const toggleBtn = document.getElementById("menu-toggle");
+          const mobileMenu = document.getElementById("mobile-menu");
+  
+          toggleBtn?.addEventListener("click", () => {
+            mobileMenu?.classList.toggle("hidden");
+          });
+  
+          document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu?.classList.add('hidden');
+            });
+          });
+        })
+        .catch(err => console.error("Navbar load error:", err));
     </script>
   
     <style>
@@ -51,7 +68,7 @@
                         <section class="">
                             <h1 class="mt-8 text-2xl font-bold text-center">Success Story</h1>
                             <div class="flex justify-center mt-6">
-                              <img src="Assests.Dk/success.png" alt="Success" class="w-[900px]" />
+                              <img src="Success.png" alt="Success" class="w-[900px]" />
                             </div>
                           </section>
 
@@ -81,38 +98,40 @@
 
                     <!-------------Branches-->
        
-  <section class="py-12 px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Branches</h2>
-
-    <div class="flex flex-wrap justify-center gap-6">
-      <!-- Branch Card -->
-      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
-        <img src="Assests.Dk/SIDDIQ TRADE CENTRE.png" alt="Siddiq Trade Centre" class="w-full h-40 object-cover">
-        <div class="bg-black text-white text-center py-2">SIDDIQ TRADE CENTRE</div>
-      </div>
-
-      <!-- Repeat for other branches -->
-      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
-        <img src="Assests.Dk/AL-HAFEEZ EXECUTIVE.png" alt="Al-Hafeez Executive" class="w-full h-40 object-cover">
-        <div class="bg-black text-white text-center py-2">AL-HAFEEZ EXECUTIVE</div>
-      </div>
-
-      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
-        <img src="Assests.Dk/JEFF HEIGHTS.png" alt="Jeff Heights" class="w-full h-40 object-cover">
-        <div class="bg-black text-white text-center py-2">JEFF HEIGHTS</div>
-      </div>
-
-      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
-        <img src="Assests.Dk/AL-HAFEEZ SHOPPING MALL.png" alt="Al-Hafeez Shopping Mall" class="w-full h-40 object-cover">
-        <div class="bg-black text-white text-center py-2">AL-HAFEEZ SHOPPING MALL</div>
-      </div>
-
-      <div class="w-60 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
-        <img src="Assests.Dk/RAFI GROUP LAND MARK.png" alt="Rafi Group Land" class="w-full h-40 object-cover">
-        <div class="bg-black text-white text-center py-2">RAFI GROUP LAND MARK</div>
-      </div>
-    </div>
-
+                    <section class="py-12 px-4">
+                      <h2 class="text-3xl font-bold text-center mb-10">Our Branches</h2>
+                    
+                      <!-- Wrapper with horizontal scroll on mobile -->
+                      <div class="flex overflow-x-auto gap-6 md:flex-wrap md:justify-center scrollbar-hide">
+                        
+                        <!-- Each branch card -->
+                        <div class="min-w-[240px] flex-shrink-0 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+                          <img src="Assests.Dk/SIDDIQ TRADE CENTRE.png" alt="Siddiq Trade Centre" class="w-full h-40 object-cover">
+                          <div class="bg-black text-white text-center py-2">SIDDIQ TRADE CENTRE</div>
+                        </div>
+                    
+                        <div class="min-w-[240px] flex-shrink-0 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+                          <img src="Assests.Dk/AL-HAFEEZ EXECUTIVE.png" alt="Al-Hafeez Executive" class="w-full h-40 object-cover">
+                          <div class="bg-black text-white text-center py-2">AL-HAFEEZ EXECUTIVE</div>
+                        </div>
+                    
+                        <div class="min-w-[240px] flex-shrink-0 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+                          <img src="Assests.Dk/JEFF HEIGHTS.png" alt="Jeff Heights" class="w-full h-40 object-cover">
+                          <div class="bg-black text-white text-center py-2">JEFF HEIGHTS</div>
+                        </div>
+                    
+                        <div class="min-w-[240px] flex-shrink-0 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+                          <img src="Assests.Dk/AL-HAFEEZ SHOPPING MALL.png" alt="Al-Hafeez Shopping Mall" class="w-full h-40 object-cover">
+                          <div class="bg-black text-white text-center py-2">AL-HAFEEZ SHOPPING MALL</div>
+                        </div>
+                    
+                        <div class="min-w-[240px] flex-shrink-0 transform hover:scale-105 transition duration-300 shadow-md rounded-lg overflow-hidden">
+                          <img src="Assests.Dk/RAFI GROUP LAND MARK.png" alt="Rafi Group Land" class="w-full h-40 object-cover">
+                          <div class="bg-black text-white text-center py-2">RAFI GROUP LAND MARK</div>
+                        </div>
+                      </div>
+                    </section>
+                    
 
                      <!------------call now------->
 
@@ -123,6 +142,11 @@
               <h2 class="text-5xl font-bold mb-4">+92 306 4277026</h2>
               <p class="text-2xl text-black">For Staffing Solutions</p>
               <h2 class="text-5xl font-bold mb-4">+92 306 4257447</h2>
+              <a href="tel:+923064257447" 
+              class="inline-block bg-black text-white px-5 py-2 rounded-md  hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out">
+              📞 Call Now
+           </a>
+           
             </div>
           
             <div class="md:w-1/2 flex justify-center">

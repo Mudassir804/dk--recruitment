@@ -5,21 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs page</title>
     <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="shortcut icon" href="1.png" type="image/x-icon">
 </head>
 <body>
   
-      <!-- Navbar link -->
-  <div id="navbar"></div>
+  <div id="navbar-placeholder"></div>
 
   <script>
     fetch("navbar.html")
       .then(res => res.text())
       .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-  </script>
+        document.getElementById("navbar-placeholder").innerHTML = data;
 
-    <div class="bg-gradient-to-r from-gray-700 to-black h-[50vh] flex items-end justify-center px-4 text-center">
+        // ✅ Bind events after navbar is inserted into DOM
+        const toggleBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        toggleBtn?.addEventListener("click", () => {
+          mobileMenu?.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu?.classList.add('hidden');
+          });
+        });
+      })
+      .catch(err => console.error("Navbar load error:", err));
+  </script>
+  
+
+    <div class="bg-gradient-to-r from-gray-700 to-black lg:h-[60vh] sm:h-[30vh] flex items-end justify-center px-4 text-center">
         <img src="Black_person--removebg-preview.png" 
              alt="Person pointing" 
              class="w-full max-w-xl mb-[-20px] " />
@@ -33,8 +49,8 @@
         <div class="space-y-4">
           <!-- Job 1 -->
           <div class="flex justify-between items-center border rounded-lg p-4">
-            <span class="font-bold text-lg">Front End Developer Job</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            <span class="font-bold text-lg tar">Front End Developer Job</span>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"  target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -45,6 +61,7 @@
           <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Backend Developer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -54,6 +71,7 @@
           <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Full Stack Developer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -64,6 +82,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Python Developer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -73,6 +92,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Android Developer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -82,6 +102,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Graphic Designer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -91,6 +112,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Ui/Ux Designer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -100,6 +122,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Animation Creator Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -109,6 +132,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">SEO Expert Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -118,6 +142,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg"> Social Media Manager Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -127,6 +152,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Google Media Manager Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -136,6 +162,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Business Developer Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -145,6 +172,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Human Resources Manager Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdld4LvdjYvzXmXtRcq63kmmUlv6-KruV01r7koW86sjtC_zA/viewform?usp=header"
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
             Apply Now
          </a>
@@ -154,6 +182,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Computer Operoter Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header" 
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
              Apply Now </a>
           </div>
@@ -162,6 +191,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Data Entry Operator Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header" 
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
              Apply Now </a>
           </div>
@@ -170,6 +200,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Chat Support Agent Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header" 
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
              Apply Now </a>
           </div> 
@@ -178,6 +209,7 @@
            <div class="flex justify-between items-center border rounded-lg p-4">
             <span class="font-bold text-lg">Call Center Job</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header" 
+            target="_blank" 
             class="inline-block bg-gradient-to-r from-gray-700 to-black text-white px-5 py-2 rounded-md hover:from-black hover:to-gray-800 transition">
              Apply Now </a>
           </div> 
@@ -245,7 +277,7 @@
               <img src="Words-removebg-preview.png" alt="" class="mx-auto mb-4">
               <h2 class="text-2xl font-semibold mb-2">Overseas Job</h2>
               <p class="mb-4 text-lg">We offer overseas jobs in countries like the UAE, US and beyond.</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header" 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv4O1tnaL3hJKdSyjNq1P5d-SFeFHaYIRuAVyQy2V3dXzr2A/viewform?usp=header"   target="_blank" 
                class="bg-white text-black font-semibold px-5 py-2 rounded shadow transition duration-300 hover:bg-gray-100 hover:scale-105 cursor-pointer">
                 Learn More
               </a>
@@ -278,6 +310,12 @@
               <h2 class="text-5xl font-bold mb-4">+92 306 4277026</h2>
               <p class="text-2xl text-black">For Staffing Solutions</p>
               <h2 class="text-5xl font-bold mb-4">+92 306 4257447</h2>
+              <a href="tel:+923064257447" 
+              class="inline-block bg-black text-white px-5 py-2 rounded-md  hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out">
+              📞 Call Now
+           </a>
+           
+
             </div>
           
             <div class="md:w-1/2 flex justify-center">
@@ -304,5 +342,7 @@ class="fixed bottom-5 left-5 bg-green-500 hover:bg-green-600 text-white rounded-
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+
+    
 </script>
 </html>
